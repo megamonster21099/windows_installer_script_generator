@@ -1,0 +1,33 @@
+name: windows_installer_script_generator
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.5.3
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #Resolving yaml scripts
+  yaml: ^3.1.2
+  #Id generator
+  uuid: ^4.5.1
+  #Pub cache packages info
+  package_config: ^2.1.0
+  #Folders paths resolving
+  path: ^1.9.0
+  #Logging
+  logger: ^2.4.0
+  #Date formatting
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+#flutter:
+#  assets:
+#    - packages/windows_installer_script_generator/assets/
