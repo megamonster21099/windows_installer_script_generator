@@ -1,39 +1,28 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## A Flutter plugin for creating scripts for Inno Setup Compiler https://jrsoftware.org/isinfo.php
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+Currently tested on Windows only. Feel free to check on MacOS.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+# Getting started
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+1. Download and install Inno Setup Compiler from https://jrsoftware.org/isdl.php#stable
+2. Add a dev dependency in your `pubspec.yaml` file:
+    ```yaml
+    dev_dependencies:
+      windows_installer_script_generator:
+        git:
+          url: https://github.com/megamonster21099/windows_installer_script_generator
+    ```
+3. Optionally, you can add a configurations in your `pubspec.yaml` file as follows:
+   ```yaml
+   windows_installer_script_generator_config:
+      app_display_name: My project Name
+      publisher: My Name
+      script_output_dir: C:\Script_output_dir
+      installer_output_dir: D:\Output_dir
+      icon: C:\Workspace\your_project\windows_icon.ico
+    ```
+4. Run the following command to generate the script:
+    ```bash
+    dart run windows_installer_script_generator:make
+    ```
+5. Open the generated script with Inno Setup Compiler and compile it.
