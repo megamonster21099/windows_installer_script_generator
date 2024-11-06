@@ -1,5 +1,5 @@
 ## A Flutter plugin for creating scripts for Inno Setup Compiler 
-See here: https://jrsoftware.org/isinfo.php
+About Inno Setup Compiler see here: https://jrsoftware.org/isinfo.php
 
 Currently tested on Windows only. Feel free to check on MacOS.
 
